@@ -59,6 +59,97 @@ html, body {
   margin: 0;
 }
 
+/* ---- resume / experience ---- */
+.resume-header {
+  width: 100%;
+  padding-top: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.resume-header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.resume-header__name {
+  font-family: var(--font-display);
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: -1.8px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.resume-header__links {
+  display: flex;
+  gap: 24px;
+}
+
+.resume-header__links a {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.resume-header__intro {
+  max-width: 720px;
+}
+
+.resume-list {
+  width: 100%;
+  max-width: 900px;
+  padding: 56px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.resume-role__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+
+.resume-role__title {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+.resume-role__title .company {
+  color: var(--color-accent);
+}
+
+.resume-role__dates {
+  font-family: var(--font-body);
+  font-size: var(--text-caption-size);
+  color: var(--color-text-caption);
+  white-space: nowrap;
+}
+
+.resume-role ul {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.resume-role li {
+  font-family: var(--font-body);
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-line-height);
+  color: var(--color-text);
+}
+
 /* ---- about ---- */
 .about-intro {
   width: 100%;
@@ -113,7 +204,7 @@ html, body {
   padding: 0 var(--space-page-x);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 /* ---- nav ---- */
