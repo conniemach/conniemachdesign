@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connie Mach — Product Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="design-system/tokens.css">
+<link rel="stylesheet" href="design-system/components.css">
+<style>
+  .hero {
+    width: 100%;
+    max-width: var(--content-max-width);
+    padding: var(--space-hero-top) 0 var(--space-hero-bottom);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 19px;
+  }
+</style>
+</head>
+<body>
+
+<site-nav active="home"></site-nav>
+
+<main class="page">
+  <section class="hero">
+    <h1 class="text-display">Hi, I'm Connie, a Product Designer at <span class="accent">Apple</span>, focused on clear UI and seamless UX.</h1>
+    <p class="text-body">6+ years of product design experience across AI-driven platforms and consumer-facing tools, for teams like Apple, CaaStle, and Mastercard.</p>
+  </section>
+
+  <div class="project-grid">
+    <div class="project-row">
+      <project-card
+        tag="CaaStle"
+        title="AI-Powered Site Search"
+        image="assets/images/project-ai-site-search.png"
+        href="projects.html"></project-card>
+      <project-card
+        tag="Mastercard"
+        title="Priceless Benefits Portal"
+        image="assets/images/project-priceless-benefits.png"
+        href="projects.html"></project-card>
+    </div>
+    <div class="project-row">
+      <project-card
+        tag="CaaStle"
+        title="Conversational Activation Flow"
+        image="assets/images/project-conversational-activation.png"
+        href="projects.html"></project-card>
+      <project-card
+        tag="Mastercard"
+        title="Live Nation Waiting Room"
+        image="assets/images/project-live-nation-waiting-room.png"
+        href="projects.html"></project-card>
+    </div>
+  </div>
+</main>
+
+<script src="design-system/components.js"></script>
+</body>
+</html>
