@@ -2,7 +2,8 @@
   /* Colors */
   --color-bg: #FFFFFF;
   --color-text: #000000;
-  --color-text-caption: #6B6B6B;
+  --color-text-caption: #6D7075;
+  --color-text-inactive: #8892A9;
   --color-accent: #4F80F2;
   --color-accent-dark: #2E4A8C;
   --color-border-subtle: rgba(79, 128, 242, 0.2);
@@ -13,16 +14,20 @@
   --font-display: 'Ubuntu', sans-serif;
   --font-body: -apple-system, 'Avenir Next', 'Avenir', 'Helvetica Neue', sans-serif;
 
-  --text-display-size: 36px;
-  --text-display-line-height: 125%;
-  --text-display-tracking: -1.08px;
+  --text-display-size: 40px;
+  --text-display-line-height: 120%;
+  --text-display-tracking: -1.8px;
 
-  --text-body-size: 14px;
+  --text-body-size: 17px;
   --text-body-line-height: 140%;
 
-  --text-link1-size: 24px;
+  --text-link1-size: 17px;
   --text-link1-line-height: 103%;
-  --text-link1-tracking: -1.08px;
+  --text-link1-tracking: -0.765px;
+
+  --text-heading-size: 32px;
+  --text-heading-line-height: 120%;
+  --text-heading-tracking: -1.44px;
 
   --text-link2-size: 16px;
   --text-link2-line-height: 103%;
@@ -41,7 +46,7 @@
   /* Radius / shadow */
   --radius-card: 20px;
   --radius-pill: 100px;
-  --shadow-card: 0 0 8px 0 rgba(79, 128, 242, 0.15);
+  --shadow-card: 0 0 8px 0 rgba(79, 128, 242, 0.10);
   --shadow-card-hover: 0 4px 8px 0 rgba(46, 74, 140, 0.25);
 
   --content-max-width: 1500px;

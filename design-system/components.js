@@ -29,8 +29,10 @@ class ProjectCard extends HTMLElement {
     const href = this.getAttribute('href') || '#';
     this.innerHTML = `
       <a class="project-card" href="${href}">
-        <span class="project-card__tag">${tag}</span>
-        <h3 class="project-card__title">${title}</h3>
+        <div class="project-card__text">
+          <span class="project-card__tag">${tag}</span>
+          <h3 class="project-card__title">${title}</h3>
+        </div>
         <img class="project-card__image" src="${image}" alt="${title}">
       </a>
     `;
