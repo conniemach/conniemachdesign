@@ -1,3 +1,15 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle('is-visible', entry.isIntersecting);
+      });
+    },
+    { threshold: 0.15, rootMargin: '0px 0px -15% 0px' }
+  );
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+});
+
 class SiteNav extends HTMLElement {
   connectedCallback() {
     const active = this.getAttribute('active') || '';

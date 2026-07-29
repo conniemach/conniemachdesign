@@ -1,3 +1,14 @@
+/* ---- scroll reveal ---- */
+.reveal {
+  opacity: 0;
+  transition: opacity 300ms cubic-bezier(0.16, 1, 0.3, 1) 0ms;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transition: opacity 1800ms cubic-bezier(0.22, 1, 0.36, 1) 120ms;
+}
+
 /* ---- base / reset ---- */
 * { box-sizing: border-box; }
 html, body {
@@ -62,7 +73,7 @@ html, body {
 /* ---- resume / experience ---- */
 .resume-header {
   width: 100%;
-  padding-top: 200px;
+  padding-top: 120px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -86,26 +97,17 @@ html, body {
 
 .resume-header__links {
   display: flex;
-  gap: 24px;
-}
-
-.resume-header__links a {
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--color-accent);
-  text-decoration: underline;
+  align-items: center;
+  gap: 12px;
 }
 
 .resume-header__intro {
-  max-width: 720px;
   color: var(--color-text-caption);
 }
 
 .resume-list {
   width: 100%;
-  max-width: 900px;
-  padding: 48px 0 20px;
+  padding: 48px 0 60px;
   display: flex;
   flex-direction: column;
   gap: 48px;
@@ -120,19 +122,25 @@ html, body {
 
 .resume-role__title {
   font-family: var(--font-body);
-  font-size: 18px;
-  font-weight: 500;
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-line-height);
+  font-weight: 600;
   color: var(--color-accent);
 }
 
 .resume-role__title .company {
-  color: var(--color-accent);
+  font-weight: 400;
+  color: #797979;
 }
 
 .resume-role__dates {
   font-family: var(--font-body);
   font-size: var(--text-caption-size);
+  line-height: var(--text-caption-line-height);
+  letter-spacing: var(--text-caption-tracking);
+  font-weight: 400;
   color: var(--color-text-caption);
+  opacity: 0.7;
   white-space: nowrap;
 }
 
@@ -154,7 +162,7 @@ html, body {
 /* ---- about ---- */
 .about-intro {
   width: 100%;
-  padding: 200px 0 20px;
+  padding: 120px 0 20px;
   display: flex;
   align-items: center;
   gap: 28px;
@@ -187,12 +195,47 @@ html, body {
 .about-connect__row {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .about-connect__row img {
   width: 20px;
   height: 20px;
+}
+
+.icon-link {
+  display: flex;
+  position: relative;
+  line-height: 0;
+}
+
+.icon-link:hover svg {
+  opacity: 0.7;
+}
+
+.icon-link[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(90, 93, 99, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.4;
+  white-space: nowrap;
+  padding: 6px 10px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.icon-link[data-tooltip]:hover::after {
+  opacity: 1;
 }
 
 /* ---- page shell ---- */
@@ -204,11 +247,6 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-
-/* /about, /projects, /experience use a wider side inset than Home */
-.page--wide {
-  --space-page-x: 148px;
 }
 
 /* /projects: spacing between top-level blocks comes from one uniform gap
@@ -228,11 +266,6 @@ html, body {
 site-nav {
   display: block;
   width: 100%;
-}
-
-/* /about, /projects, /experience use a narrower nav inset than Home */
-site-nav.nav--inner {
-  --space-page-x: 80px;
 }
 
 .nav {
@@ -381,7 +414,7 @@ site-nav.nav--inner {
 /* ---- case study ---- */
 .case-hero {
   width: 100%;
-  padding-top: 180px;
+  padding-top: 120px;
   display: flex;
   flex-direction: column;
   gap: 20px;
